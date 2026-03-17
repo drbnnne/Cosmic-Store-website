@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Store | Магазин космических товаров</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome для иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS библиотека для анимации при скролле -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+<!-- Прелоадер -->
+<div class="loader-wrapper" id="loader">
+    <div class="loader">
+        <div class="rocket">
+            <i class="fas fa-rocket"></i>
+        </div>
+        <div class="loader-text">Загрузка...</div>
+    </div>
+</div>
+
+<!-- Навигация -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <i class="fas fa-meteor"></i>
+            <span>CosmicStore</span>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#home" class="nav-link active">Главная</a></li>
+            <li><a href="#products" class="nav-link">Товары</a></li>
+            <li><a href="#about" class="nav-link">О нас</a></li>
+            <li><a href="#contact" class="nav-link">Контакты</a></li>
+        </ul>
+        <div class="nav-icons">
+            <div class="icon-wrapper search-icon">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="icon-wrapper cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">3</span>
+            </div>
+            <div class="icon-wrapper menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Главная секция с параллаксом -->
+<section id="home" class="hero">
+    <div class="parallax-bg">
+        <div class="stars"></div>
+        <div class="twinkling"></div>
+        <div class="clouds"></div>
+    </div>
+
+    <div class="hero-content">
+        <h1 class="animate-title" data-aos="fade-up" data-aos-duration="1000">
+            <span class="gradient-text">Космические</span> товары
+        </h1>
+        <p class="animate-subtitle" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+            Откройте для себя уникальные предметы из другой галактики
+        </p>
+        <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+            <button class="btn btn-primary pulse-animation" onclick="buyNow()">
+                <i class="fas fa-rocket"></i>
+                Купить сейчас
+            </button>
+            <button class="btn btn-secondary" onclick="learnMore()">
+                <i class="fas fa-star"></i>
+                Узнать больше
+            </button>
+        </div>
+    </div>
+
+    <!-- Парящие элементы -->
+    <div class="floating-elements">
+        <div class="floating-element element-1">
+            <i class="fas fa-meteor"></i>
+        </div>
+        <div class="floating-element element-2">
+            <i class="fas fa-saturn"></i>
+        </div>
+        <div class="floating-element element-3">
+            <i class="fas fa-moon"></i>
+        </div>
+        <div class="floating-element element-4">
+            <i class="fas fa-star"></i>
+        </div>
+    </div>
+</section>
+
+<!-- Секция с иконками сервисов -->
+<section class="services">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Наши преимущества</h2>
+        <div class="services-grid">
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-icon cosmic-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h3>Быстрая доставка</h3>
+                <p>Доставим за 3 световых года</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-icon cosmic-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Космическая защита</h3>
+                <p>Гарантия от метеоритов</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-icon cosmic-icon">
+                    <i class="fas fa-gem"></i>
+                </div>
+                <h3>Инопланетные технологии</h3>
+                <p>Только оригиналы</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Секция с товарами -->
+<section id="products" class="products">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Популярные товары</h2>
+        <div class="products-grid">
+            <!-- Карточка товара 1 -->
+            <div class="product-card" data-aos="flip-left" data-aos-delay="100">
+                <div class="product-badge">Хит продаж</div>
+                <div class="product-image cosmic-image">
+                    <img src="https://via.placeholder.com/300x200/1a1a2e/4ecdc4?text=Space+Helmet" alt="Space Helmet">
+                    <div class="image-overlay">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Космический шлем</h3>
+                    <p class="product-price">9 999 ⭐</p>
+                    <div class="product-actions">
+                        <button class="btn-buy" onclick="buyProduct('Шлем')">
+                            <i class="fas fa-cart-plus"></i> Купить
+                        </button>
+                        <div class="product-icons">
+                            <i class="far fa-heart wishlist-icon"></i>
+                            <i class="far fa-share-square share-icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка товара 2 -->
+            <div class="product-card" data-aos="flip-left" data-aos-delay="200">
+                <div class="product-badge">Новинка</div>
+                <div class="product-image cosmic-image">
+                    <img src="https://via.placeholder.com/300x200/1a1a2e/ff6b6b?text=Anti-Gravity+Shoes" alt="Anti-Gravity Shoes">
+                    <div class="image-overlay">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Антигравитационные ботинки</h3>
+                    <p class="product-price">14 999 ⭐</p>
+                    <div class="product-actions">
+                        <button class="btn-buy" onclick="buyProduct('Ботинки')">
+                            <i class="fas fa-cart-plus"></i> Купить
+                        </button>
+                        <div class="product-icons">
+                            <i class="far fa-heart wishlist-icon"></i>
+                            <i class="far fa-share-square share-icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка товара 3 -->
+            <div class="product-card" data-aos="flip-left" data-aos-delay="300">
+                <div class="product-image cosmic-image">
+                    <img src="https://via.placeholder.com/300x200/1a1a2e/96f0b6?text=Space+Food" alt="Space Food">
+                    <div class="image-overlay">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Космическая еда (набор)</h3>
+                    <p class="product-price">4 999 ⭐</p>
+                    <div class="product-actions">
+                        <button class="btn-buy" onclick="buyProduct('Еда')">
+                            <i class="fas fa-cart-plus"></i> Купить
+                        </button>
+                        <div class="product-icons">
+                            <i class="far fa-heart wishlist-icon"></i>
+                            <i class="far fa-share-square share-icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка товара 4 -->
+            <div class="product-card" data-aos="flip-left" data-aos-delay="400">
+                <div class="product-image cosmic-image">
+                    <img src="https://via.placeholder.com/300x200/1a1a2e/ffd93d?text=Space+Map" alt="Space Map">
+                    <div class="image-overlay">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Карта галактики</h3>
+                    <p class="product-price">2 999 ⭐</p>
+                    <div class="product-actions">
+                        <button class="btn-buy" onclick="buyProduct('Карта')">
+                            <i class="fas fa-cart-plus"></i> Купить
+                        </button>
+                        <div class="product-icons">
+                            <i class="far fa-heart wishlist-icon"></i>
+                            <i class="far fa-share-square share-icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Секция "О нас" -->
+<section id="about" class="about">
+    <div class="container">
+        <div class="about-content">
+            <div class="about-text" data-aos="fade-right">
+                <h2 class="section-title">О нашей галактике</h2>
+                <p>Мы - первый магазин, доставляющий товары с разных уголков вселенной. Наша миссия - сделать космические технологии доступными для каждого.</p>
+                <div class="stats">
+                    <div class="stat">
+                        <span class="stat-number">1000+</span>
+                        <span class="stat-label">довольных инопланетян</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">планет</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">поддержка</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image" data-aos="fade-left">
+                <div class="cosmic-circle">
+                    <i class="fas fa-rocket"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Секция контактов -->
+<section id="contact" class="contact">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Свяжитесь с нами</h2>
+        <div class="contact-content">
+            <form class="contact-form" data-aos="fade-up" data-aos-delay="100" id="contactForm">
+                <input type="text" placeholder="Ваше имя" required>
+                <input type="email" placeholder="Ваш email" required>
+                <textarea placeholder="Ваше сообщение" rows="5" required></textarea>
+                <button type="submit" class="btn btn-primary pulse-animation" onclick="sendMessage(event)">
+                    <i class="fas fa-paper-plane"></i> Отправить
+                </button>
+            </form>
+            <div class="contact-info" data-aos="fade-up" data-aos-delay="200">
+                <div class="info-item cosmic-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Галактика Млечный Путь, рукав Ориона</p>
+                </div>
+                <div class="info-item cosmic-icon">
+                    <i class="fas fa-phone"></i>
+                    <p>+0 (123) 456-7890</p>
+                </div>
+                <div class="info-item cosmic-icon">
+                    <i class="fas fa-envelope"></i>
+                    <p>hello@cosmicstore.space</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>CosmicStore</h3>
+                <p>Ваш проводник в мир космических технологий</p>
+            </div>
+            <div class="footer-section">
+                <h3>Навигация</h3>
+                <ul>
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#products">Товары</a></li>
+                    <li><a href="#about">О нас</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Мы в соцсетях</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon cosmic-icon">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="#" class="social-icon cosmic-icon">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                    <a href="#" class="social-icon cosmic-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon cosmic-icon">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CosmicStore. Все права защищены.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Уведомление -->
+<div class="notification" id="notification">
+    <i class="fas fa-check-circle"></i>
+    <span id="notificationMessage">Товар добавлен в корзину!</span>
+</div>
+
+<!-- Подключаем скрипты -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
